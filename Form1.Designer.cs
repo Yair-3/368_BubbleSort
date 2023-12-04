@@ -31,6 +31,7 @@
             panel1 = new Panel();
             button1 = new Button();
             button2 = new Button();
+            comboBox1 = new ComboBox();
             SuspendLayout();
             // 
             // panel1
@@ -52,7 +53,7 @@
             // 
             // button2
             // 
-            button2.Location = new Point(546, 337);
+            button2.Location = new Point(544, 337);
             button2.Name = "button2";
             button2.Size = new Size(134, 84);
             button2.TabIndex = 1;
@@ -60,11 +61,22 @@
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "Radix Sort", "Bubble Sort", "Counting Sort", "QuickSort", "Insertion Sort" });
+            comboBox1.Location = new Point(326, 337);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(121, 23);
+            comboBox1.TabIndex = 0;
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(comboBox1);
             Controls.Add(button2);
             Controls.Add(button1);
             Controls.Add(panel1);
@@ -78,5 +90,6 @@
         private Panel panel1;
         private Button button1;
         private Button button2;
+        private ComboBox comboBox1;
     }
 }
